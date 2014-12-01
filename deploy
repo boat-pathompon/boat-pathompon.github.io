@@ -1,0 +1,6 @@
+middleman build --clean
+cd build
+git add -A
+git commit -m 'Deploy'
+git push production gh-pages
+cd ..
