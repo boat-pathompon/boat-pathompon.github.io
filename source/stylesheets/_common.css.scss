@@ -1,4 +1,24 @@
 html {
+  background-color: $color-html-bg;
+  box-sizing: 320px;
+  color: #555;
   font-family: Sukhumvit, Arial, serif;
-  font-size: 20px;
+  font-size: 22px;
+  font-weight: 100;
+  min-width: 320px;
+}
+
+a {
+  text-decoration: none;
+  transition: .3s color, .3s text-shadow;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+
+}
+ul {
+  margin: 0;
+  padding: 0;
 }

@@ -8,6 +8,7 @@ gem "middleman"
 
 gem "coffee-script"
 gem "sass"
+gem "font-awesome-sass"
 
 # Live-reloading plugin
 gem "middleman-livereload", "~> 3.1.0"
