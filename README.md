@@ -59,3 +59,4 @@ Make deployment easier by creating some rake task for it
 rake deploy:setup                                     # Preparing deployment process
 rake deploy:publish MESSAGE='Some commit messages'    # Stage all changes commit and push
 ```
+- Change font-size to better support responsive
