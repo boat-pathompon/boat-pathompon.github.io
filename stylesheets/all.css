@@ -1,44 +1,39 @@
 @font-face {
-  src: url("../fonts/woff/boon-300.woff") format("woff");
-  font-family: "Boon-0.6";
+  src: url("../fonts/woff/SukhumvitSet-Thin.woff") format("woff");
+  font-family: "Sukhumvit";
+  font-style: normal;
+  font-weight: 100; }
+@font-face {
+  src: url("../fonts/woff/SukhumvitSet-Light.woff") format("woff");
+  font-family: "Sukhumvit";
+  font-style: normal;
+  font-weight: 200; }
+@font-face {
+  src: url("../fonts/woff/SukhumvitSet-Text.woff") format("woff");
+  font-family: "Sukhumvit";
   font-style: normal;
   font-weight: 300; }
 @font-face {
-  src: url("../fonts/woff/boon-300-oblique.woff") format("woff");
-  font-family: "Boon-0.6";
-  font-style: italic;
-  font-weight: 300; }
-@font-face {
-  src: url("../fonts/woff/boon-400.woff") format("woff");
-  font-family: "Boon-0.6";
+  src: url("../fonts/woff/SukhumvitSet-Medium.woff") format("woff");
+  font-family: "Sukhumvit";
   font-style: normal;
   font-weight: 400; }
 @font-face {
-  src: url("../fonts/woff/boon-400-oblique.woff") format("woff");
-  font-family: "Boon-0.6";
-  font-style: italic;
-  font-weight: 400; }
-@font-face {
-  src: url("../fonts/woff/boon-500.woff") format("woff");
-  font-family: "Boon-0.6";
+  src: url("../fonts/woff/SukhumvitSet-SemiBold.woff") format("woff");
+  font-family: "Sukhumvit";
   font-style: normal;
   font-weight: 500; }
 @font-face {
-  src: url("../fonts/woff/boon-500-oblique.woff") format("woff");
-  font-family: "Boon-0.6";
-  font-style: italic;
-  font-weight: 500; }
+  src: url("../fonts/woff/SukhumvitSet-SemiBold.woff") format("woff");
+  font-family: "Sukhumvit";
+  font-style: normal;
+  font-weight: 600; }
 @font-face {
-  src: url("../fonts/woff/boon-700.woff") format("woff");
-  font-family: "Boon-0.6";
+  src: url("../fonts/woff/SukhumvitSet-Bold.woff") format("woff");
+  font-family: "Sukhumvit";
   font-style: normal;
   font-weight: 700; }
-@font-face {
-  src: url("../fonts/woff/boon-700-oblique.woff") format("woff");
-  font-family: "Boon-0.6";
-  font-style: italic;
-  font-weight: 700; }
-/* line 3, /Users/boatp/littleb-land/source/stylesheets/all.css.scss */
+/* line 1, /Users/boatj/Projects/boat-pathompon.github.io/source/stylesheets/_common.css.scss */
 html {
-  font-family: 'Boon-0.6', serif;
-  font-size: 22px; }
+  font-family: Sukhumvit, Arial, serif;
+  font-size: 20px; }
