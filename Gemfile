@@ -27,6 +27,3 @@ gem "uglifier"
 # Faster JS compiles
 gem 'therubyracer'
 gem 'oj'
-
-# Middleman gh pages
-gem 'middleman-gh-pages'
