@@ -33,7 +33,7 @@
 ###
 
 # Automatic image dimensions on image_tag helper
-# activate :automatic_image_sizes
+activate :automatic_image_sizes
 
 # Reload the browser automatically whenever files change
 configure :development do
@@ -41,11 +41,13 @@ configure :development do
 end
 
 # Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+helpers do
+  def post_time(date)
+    content_tag :div, class: 'post-time' do
+      "<i class='fa fa-clock-o'></i> อัพเดตล่าสุด #{date}".html_safe
+    end
+  end
+end
 
 # Autoprefixer
 activate :autoprefixer do |config|

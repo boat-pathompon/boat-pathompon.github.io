@@ -10,6 +10,7 @@ $color-yellow: #E6B800;
 $color-yellow-dark: #CFA600;
 $color-coral: #FF5050;
 $color-coral-dark: #CC4040;
+$color-line: #1DCD00;
 
 // Common theme.
 $color-html-bg: #ddd;
@@ -20,4 +21,14 @@ $color-html-shadow: #aaa;
   padding: 1rem 2rem;
 
   @media screen and (max-width: 480px) { padding: 1rem; }
+}
+
+@mixin clear-float {
+  &::after  {
+    content: "";
+    clear: both;
+    display: block;
+    float: none;
+    width: 100%;
+  }
 }

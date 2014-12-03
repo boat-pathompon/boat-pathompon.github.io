@@ -1,0 +1,22 @@
+.image-frame {
+  margin: 1rem auto;
+  max-width: 1024px;
+  width: 100%;
+
+  img { width: 100%; }
+}
+
+.page {
+  @include container;
+  background: #fff;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding-bottom: 2rem;
+  width: 100%;
+}
+
+.post-time {
+  color: #aaa;
+  font-size: 0.8rem;
+  text-align: right;
+}
