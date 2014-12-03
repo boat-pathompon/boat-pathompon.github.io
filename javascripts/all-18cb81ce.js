@@ -1,1 +1,0 @@
-(function(){$(function(){return $(".js--nav--menu--toggle").click(function(n){return $(this).parent().find(".nav--menu--dropdown").fadeIn(200),n.preventDefault(),n.stopPropagation(),$("body").one("click",function(){return $(".nav--menu--dropdown").hide()})})})}).call(this);
