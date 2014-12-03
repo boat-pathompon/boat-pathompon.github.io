@@ -1,28 +1,27 @@
-$color-header: $color-cyan;
-$color-header-border: $color-cyan-dark;
+$color-header: $color-green;
+$color-header-border: $color-green-dark;
 
 header {
   background-color: $color-header;
   border-bottom: 5px solid $color-header-border;
   box-shadow: 0 1px 2px $color-html-shadow;
 
-  padding: 15px 50px;
+  padding: 1rem 4rem;
 
-  @media screen and (max-width: 480px) { padding: 15px; }
+  @media screen and (max-width: 480px) { padding: 1rem 2rem; }
 
   #logo {
     color: #fff;
     font-family: 'Dancing script';
-    font-size: 38px;
+    font-size: 2rem;
     position: relative;
 
     .suffix {
-      // font-family: Sukhumvit, Arial;
-      font-size: 18px;
+      font-size: 1rem;
       font-weight: 200;
       position: absolute;
-      top: -10px;
-      right: -32px;
+      top: -0.5rem;
+      right: -2rem;
     }
   }
 
@@ -32,65 +31,98 @@ header {
     li {
       float: left;
       list-style: none;
-      margin-left: 10px;
+      margin-left: 2rem;
 
       a {
-        border-bottom-style: solid;
-        border-bottom-width: 3px;
-        border-radius: 3px;
-        color: #fff;
-        display: block;
-        font-size: 18px;
-        padding: 4px 15px;
+        color: $color-green-white;
+        display: inline-block;
+        font-size: 1rem;
+        line-height: 2rem;
+        min-width: 2.5rem;
+        text-align: center;
       }
 
       i {
-        font-size: 16px;
-        margin-right: 10px;
-      }
+        font-size: 1rem;
+        margin-right: 5px;
+        vertical-align: middle;
 
-      .nav--allpost {
-        background-color: $color-allpost;
-        border-bottom-color: $color-allpost-dark;
-      }
-
-      .nav--contact {
-        background-color: $color-contact;
-        border-bottom-color: $color-contact-dark;
+        &.notext { margin-right: 0; }
       }
 
       .nav--facebook {
         background-color: $color-facebook;
-        border-bottom-color: $color-facebook-dark;
+        border-bottom: 0.2rem solid $color-facebook-dark;
+        border-radius: 10%;
+        color: #fff;
       }
-    }
 
-    @media screen and (max-width: 700px) {
-      li {
-        margin-left: 8px;
+      &.nav--menu {
+        display: none;
+        position: relative;
 
-        a {
-          text-align: center;
-          width: 18px;
+        a.js--nav--menu--toggle {
+          border-radius: 10%;
+          color: #fff;
+          line-height: 2.25rem;
+
+          i { font-size: 1.75rem; }
+
+          &:hover { background-color: $color-green-dark; }
         }
 
-        i { margin-right: 0; }
-        .text { display: none; }
+        ul.nav--menu--dropdown {
+          background-color: #fff;
+          box-shadow: 0 0 0.25rem $color-html-shadow;
+          border-radius: 0.25rem;
+          display: none;
+          padding: 0.5rem;
+          position: absolute;
+          right: 0;
+          top: 3rem;
+
+          li {
+            display: block;
+            float: none;
+            min-width: 10rem;
+
+            a { color: #555; }
+          }
+        }
       }
     }
 
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 640px) {
       li {
-        margin-left: 5px;
+        margin-left: 1rem;
 
-        a { padding: 4px 12px; }
+        &.hidden--640 { display: none; }
+        &.nav--menu { display: block; }
+    // //
+    // //     a {
+    // //       text-align: center;
+    // //       width: 18px;
+    // //     }
+    // //
+    // //     i { margin-right: 0; }
+    //     .nav--contact {
+    //       .text { display: none; }
+    //     }
       }
     }
+    //
+    // @media screen and (max-width: 480px) {
+    //   li {
+    //     margin-left: 5px;
+    //
+    //     a { padding: 4px 12px; }
+    //   }
+    // }
   }
 }
 
 #content {
-  padding: 15px 50px;
+  padding: 1rem 4rem;
 
-  @media screen and (max-width: 480px) { padding: 15px; }
+  @media screen and (max-width: 480px) { padding: 1rem 2rem; }
 }
