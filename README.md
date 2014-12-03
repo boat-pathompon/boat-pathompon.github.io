@@ -60,3 +60,9 @@ rake deploy:setup                                     # Preparing deployment pro
 rake deploy:publish MESSAGE='Some commit messages'    # Stage all changes commit and push
 ```
 - Change font-size to better support responsive
+- Add Footer
+- Add card style for page
+- Change index to all page
+- Add facebook page to link in nav
+- Change contact us to mailto link
+- Bring some old fb post as page
