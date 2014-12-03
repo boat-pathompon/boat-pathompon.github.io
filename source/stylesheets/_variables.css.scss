@@ -6,7 +6,16 @@ $color-green-darker: #005C00;
 $color-green-darkest: #004A00;
 $color-facebook: #1947D1;
 $color-facebook-dark: #123498;
+$color-yellow: #E6B800;
+$color-yellow-dark: #B89300;
 
 // Common theme.
 $color-html-bg: #ddd;
 $color-html-shadow: #aaa;
+
+@mixin container {
+  box-sizing: border-box;
+  padding: 1rem 2rem;
+
+  @media screen and (max-width: 480px) { padding: 1rem; }
+}

@@ -2,127 +2,101 @@ $color-header: $color-green;
 $color-header-border: $color-green-dark;
 
 header {
+  @include container;
   background-color: $color-header;
-  border-bottom: 5px solid $color-header-border;
-  box-shadow: 0 1px 2px $color-html-shadow;
-
-  padding: 1rem 4rem;
-
-  @media screen and (max-width: 480px) { padding: 1rem 2rem; }
+  box-shadow: 0 1px 3px $color-html-shadow;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
 
   #logo {
     color: #fff;
     font-family: 'Dancing script';
     font-size: 2rem;
+    line-height: 1.25;
     position: relative;
 
     .suffix {
+      bottom: -0.5rem;
       font-size: 1rem;
       font-weight: 200;
       position: absolute;
-      top: -0.5rem;
-      right: -2rem;
+      right: 0;
     }
   }
 
-  #topnav {
-    float: right;
+  #topnav { float: right; }
 
-    li {
-      float: left;
-      list-style: none;
-      margin-left: 2rem;
+  li {
+    float: left;
+    list-style: none;
+    margin-left: 8px;
 
-      a {
-        color: $color-green-white;
-        display: inline-block;
-        font-size: 1rem;
-        line-height: 2rem;
-        min-width: 2.5rem;
-        text-align: center;
-      }
+    a {
+      color: #fff;
+      display: block;
+      font-size: 1rem;
+      line-height: 2.5;
+      min-width: 2.5rem;
+      text-align: center;
+    }
+
+    i { vertical-align: middle; }
+  }
+
+  .nav-socials {
+    float: left;
+    margin-left: 10px;
+  }
+
+  .nav-circle { border-radius: 50%; }
+
+  .nav-facebook {
+    background-color: $color-facebook;
+    &:hover { background-color: $color-facebook-dark; }
+  }
+
+  .nav-contact {
+    background-color: $color-yellow;
+    &:hover { background-color: $color-yellow-dark; }
+  }
+
+  .nav-allpost {
+    background-color: $color-green-dark;
+    border-radius: 3px;
+    padding: 0 1rem;
+
+    i {
+      font-size: 1.25rem;
+      margin-right: 1rem;
+    }
+
+    &:hover { background-color: $color-green-darker; }
+  }
+
+  @media screen and (max-width: 480px) {
+    #logo { line-height: 1; }
+
+    .nav-socials {
+      bottom: -1.7rem;
+      position: absolute;
+      right: 1rem;
+    }
+
+    .nav-allpost {
+      font-size: 0.8rem;
+      padding: 0 0.5rem;
 
       i {
-        font-size: 1rem;
-        margin-right: 5px;
-        vertical-align: middle;
-
-        &.notext { margin-right: 0; }
-      }
-
-      .nav--facebook {
-        background-color: $color-facebook;
-        border-bottom: 0.2rem solid $color-facebook-dark;
-        border-radius: 10%;
-        color: #fff;
-      }
-
-      &.nav--menu {
-        display: none;
-        position: relative;
-
-        a.js--nav--menu--toggle {
-          border-radius: 10%;
-          color: #fff;
-          line-height: 2.25rem;
-
-          i { font-size: 1.75rem; }
-
-          &:hover { background-color: $color-green-dark; }
-        }
-
-        ul.nav--menu--dropdown {
-          background-color: #fff;
-          box-shadow: 0 0 0.25rem $color-html-shadow;
-          border-radius: 0.25rem;
-          display: none;
-          padding: 0.5rem;
-          position: absolute;
-          right: 0;
-          top: 3rem;
-
-          li {
-            display: block;
-            float: none;
-            min-width: 10rem;
-
-            a { color: #555; }
-          }
-        }
+        font-size: 1.1rem;
+        margin-right: 0.5rem;
       }
     }
-
-    @media screen and (max-width: 640px) {
-      li {
-        margin-left: 1rem;
-
-        &.hidden--640 { display: none; }
-        &.nav--menu { display: block; }
-    // //
-    // //     a {
-    // //       text-align: center;
-    // //       width: 18px;
-    // //     }
-    // //
-    // //     i { margin-right: 0; }
-    //     .nav--contact {
-    //       .text { display: none; }
-    //     }
-      }
-    }
-    //
-    // @media screen and (max-width: 480px) {
-    //   li {
-    //     margin-left: 5px;
-    //
-    //     a { padding: 4px 12px; }
-    //   }
-    // }
   }
 }
 
 #content {
-  padding: 1rem 4rem;
-
-  @media screen and (max-width: 480px) { padding: 1rem 2rem; }
+  @include container;
+  margin-top: 4.5rem;
 }
