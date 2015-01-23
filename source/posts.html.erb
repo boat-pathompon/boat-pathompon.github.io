@@ -1,0 +1,18 @@
+---
+title: All Posts
+no_footer: true
+---
+
+<div class='post-container content-wrapper'>
+  <% blog.articles.each do |article| %>
+    <div class='post-card'>
+      <a href='<%= article.url %>'>
+        <div class='post-title'><%= article.title %></div>
+        <img class='post-cover' src='<%= article.data.cover %>'/>
+      </a>
+      <%= post_time article %>
+      <div class='post-description'><%= article.data.description %></div>
+      <%= post_tags article %>
+    </div>
+  <% end %>
+</div>

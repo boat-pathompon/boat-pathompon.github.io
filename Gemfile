@@ -5,6 +5,7 @@ source 'https://rubygems.org'
 ruby '2.1.3'
 
 gem "middleman"
+gem "middleman-blog"
 
 gem "coffee-script"
 gem "sass"

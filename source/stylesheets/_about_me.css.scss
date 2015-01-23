@@ -1,0 +1,39 @@
+.about-me {
+  .avatar {
+    float: left;
+    width: 350px;
+    text-align: center;
+  }
+
+  .contact-informations {
+    li {
+      display: inline-block;
+      font-weight: 200;
+      float: left;
+      list-style: none;
+      margin-right: 10px;
+      vertical-align: bottom;
+    }
+
+    i {
+      font-style: normal;
+      font-weight: 700;
+      margin-right: 18px;
+    }
+
+    a {
+      color: #fff;
+      display: block;
+      line-height: 20px;
+      padding: 15px 25px;
+    }
+
+    .info-email { background-color: $color-red; }
+    .info-facebook { background-color: $color-facebook; }
+    .info-line {
+      background-color: $color-green;
+
+      i { font-family: Arial, serif; }
+    }
+  }
+}

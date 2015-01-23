@@ -1,36 +1,17 @@
-###
-# Compass
-###
+# Blog
+Time.zone = "Asia/Bangkok"
 
-# Change Compass configuration
-# compass_config do |config|
-#   config.output_style = :compact
-# end
+activate :blog do |blog|
+  blog.permalink = "posts/{title}.html"
+  blog.sources = "posts/{year}-{month}-{day}-{title}.html"
+  blog.taglink = "tags/{tag}.html"
+  blog.default_extension = ".erb"
 
-###
-# Page options, layouts, aliases and proxies
-###
+  blog.tag_template = "tag.html"
+  blog.calendar_template = "calendar.html"
 
-# Per-page layout changes:
-#
-# With no layout
-# page "/path/to/file.html", :layout => false
-#
-# With alternative layout
-# page "/path/to/file.html", :layout => :otherlayout
-#
-# A path which all have the same layout
-# with_layout :admin do
-#   page "/admin/*"
-# end
-
-# Proxy pages (http://middlemanapp.com/basics/dynamic-pages/)
-# proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
-#  :which_fake_page => "Rendering a fake page with a local variable" }
-
-###
-# Helpers
-###
+  blog.paginate = false
+end
 
 # Automatic image dimensions on image_tag helper
 activate :automatic_image_sizes
@@ -40,11 +21,25 @@ configure :development do
   activate :livereload
 end
 
-# Methods defined in the helpers block are available in templates
+
+# Helpers
 helpers do
-  def post_time(date)
+  def post_time(article)
+    time_text = [article.date.strftime('%Y-%m-%d'), article.data.time]
     content_tag :div, class: 'post-time' do
-      "<i class='fa fa-clock-o'></i> อัพเดตล่าสุด #{date}".html_safe
+      [
+        content_tag(:i, '', class: 'fa fa-clock-o'),
+        content_tag(:abbr, time_text.join(' '), title: time_text.join('T'))
+      ].join.html_safe
+    end
+  end
+
+  def post_tags(article)
+    content_tag :div, class: 'post-tags' do
+      [
+        content_tag(:i, '', class: 'fa fa-tags'),
+        article.tags.map { |tag| link_to("##{tag}", tag_path(tag)) }
+      ].flatten.join.html_safe
     end
   end
 end
@@ -57,26 +52,13 @@ end
 # Pretty URLs
 activate :directory_indexes
 
+# Dirs
 set :css_dir, 'stylesheets'
-
 set :js_dir, 'javascripts'
-
 set :images_dir, 'images'
 
-# Build-specific configuration
 configure :build do
-  # For example, change the Compass output style for deployment
   activate :minify_css
-
-  # Minify Javascript on build
   activate :minify_javascript
-
-  # Enable cache buster
   activate :asset_hash
-
-  # Use relative URLs
-  # activate :relative_assets
-
-  # Or use a different image path
-  # set :http_prefix, "/Content/images/"
 end

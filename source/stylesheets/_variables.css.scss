@@ -1,26 +1,38 @@
-// Base colors.
-$color-green-white: #DAEDDA;
-$color-green: #339933;
-$color-green-dark: #297A29;
-$color-green-darker: #005C00;
-$color-green-darkest: #004A00;
-$color-facebook: #1947D1;
-$color-facebook-dark: #123498;
-$color-yellow: #E6B800;
-$color-yellow-dark: #CFA600;
+// Red tones.
 $color-coral: #FF5050;
-$color-coral-dark: #CC4040;
-$color-line: #1DCD00;
+$color-red: #900;
+$color-red-shadow: #700;
+$color-skitch: #ff0066;
 
-// Common theme.
-$color-html-bg: #ddd;
-$color-html-shadow: #aaa;
+// Blue tones.
+$color-sky-blue: #09f;
+$color-facebook: #0066CC;
+$color-facebook-shadow: #0052a3;
+
+// Green tones.
+$color-dimmed-cyan: #6EB893;
+$color-dimmed-cyan-shadow: #5E8E77;
+$color-aqua: #19d1a3;
+$color-green: #080;
+$color-yellow-green: #52cc29;
+
+// Orange tones.
+$color-dimmed-light-orange: #E0C897;
+$color-orange: #ff7519;
+
+// Purple tones.
+$color-violet: #7519d1;
 
 @mixin container {
   box-sizing: border-box;
-  padding: 1rem 2rem;
+  padding: 20px 30px;
+}
 
-  @media screen and (max-width: 480px) { padding: 1rem; }
+@mixin content-wrapper {
+  max-width: 1280px;
+  min-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @mixin clear-float {
