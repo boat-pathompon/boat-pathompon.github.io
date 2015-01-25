@@ -1,7 +1,8 @@
 header {
-  background-color: $color-dimmed-cyan;
+  background-color: #555;
   border-bottom: 10px solid $color-dimmed-light-orange;
   box-shadow: 0 0 2px rgba(150, 150, 150, 0.5);
+  font-family: 'Roboto Condensed', Arial, serif;
   position: fixed;
   right: 0;
   top: 0;
@@ -13,7 +14,7 @@ header {
     font-family: 'Dancing script';
     font-size: 35px;
     position: relative;
-    text-shadow: 0 1px 0 $color-dimmed-cyan-shadow;
+    text-shadow: 0 1px 0 #333;
 
     .suffix {
       font-size: 16px;
@@ -44,7 +45,7 @@ header {
     line-height: 35px;
     padding: 10px 18px;
 
-    &:hover { background-color: $color-dimmed-cyan-shadow; }
+    &:hover { color: $color-orange; }
 
     &.follow-fb-link {
       background-color: $color-facebook;
@@ -60,6 +61,7 @@ header {
 #footer {
   bottom: 0;
   font-size: 14px;
+  height: 70px;
   position: absolute;
   width: 100%;
 
@@ -77,13 +79,47 @@ header {
 
   a {
     color: #999;
+    line-height: 24px;
 
     &:hover { color: #555; }
   }
 
   .copyright {
-    color: $color-dimmed-cyan;
+    color: $color-dimmed-cyan-shadow;
     float: right;
     margin-right: 0;
+  }
+
+  .site-name {
+    font-family: 'Dancing Script';
+    font-size: 24px;
+    margin-left: 5px;
+  }
+}
+
+#page-title {
+  border-bottom: 1px solid #ddd;
+  font-size: 50px;
+  font-weight: 300;
+  line-height: 1;
+  margin-top: 110px;
+  margin-bottom: 0;
+  overflow: hidden;
+  padding-bottom: 20px;
+
+  .subtitle {
+    color: #999;
+    font-size: 20px;
+    padding-left: 5px;
+    line-height: 1.8;
+
+    .post-tags {
+      display: inline;
+      font-size: 16px;
+      margin-left: 10px;
+
+      a { color: $color-dimmed-light-orange; }
+      i { margin-right: 8px; }
+    }
   }
 }

@@ -45,17 +45,11 @@
       color: #555;
       font-size: 14px;
       font-weight: 400;
-      margin-right: 8px;
 
       &:hover { color: $color-sky-blue; }
     }
 
-    i {
-      color: #aaa;
-      position: absolute;
-      top: -8px;
-      left: 15px;
-    }
+    i { display: none; }
   }
 }
 
@@ -68,5 +62,23 @@
   h1, h2, h3, h4, h5, h6 {
     border: none;
     padding-left: 0;
+  }
+}
+
+.post-author-info {
+  color: #aaa;
+  display: block;
+  font-size: 14px;
+  margin-bottom: 10px;
+  margin-top: -5px;
+  padding-right: 15px;
+  text-align: right;
+
+  .post-author { color: $color-dimmed-cyan; }
+  .post-time {
+    display: inline;
+    margin-left: 10px;
+
+    i { margin-right: 5px; }
   }
 }

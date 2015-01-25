@@ -33,11 +33,26 @@
       </div>
     </header>
 
-    <h1 id='page-title'>
-      <span class='content-wrapper'><%= current_page.data.title %></span>
-    </h1>
+    <div class='container'>
+      <h1 id='page-title' class='content-wrapper'>
+        <%= current_page.data.title %>
+        <div class='subtitle'>
+          <%= current_page.data.subtitle %>
+          <% if current_article %>
+            <%= post_tags current_article %>
+          <% end %>
+        </div>
+      </h1>
 
-    <div id='content' class='content-wrapper'>
+      <% if current_article %>
+        <span class='post-author-info content-wrapper'>
+          by <span class='post-author'><%= current_article.data.author %></span>
+          <%= post_time current_article %>
+        </span>
+      <% end %>
+    </div>
+
+    <div id='content' class='container content-wrapper'>
       <%= yield %>
     </div>
 
@@ -49,7 +64,7 @@
           <li><a href='/tags'><i class='fa fa-tags'></i>Tags</a></li>
           <li><a href='/about-me'><i class='fa fa-paper-plane'></i>About Me</a></li>
           <li><a href='http://facebook.com/little.b.cartoon' target='_blank'><i class='fa fa-facebook'></i>Facebook Page</a></li>
-          <li class='copyright'>Copyright ® 2015 Little B</li>
+          <li class='copyright'>Copyright ® 2015 <span class='site-name'>LittleB</span></li>
         </ul>
       </nav>
     <% end %>
