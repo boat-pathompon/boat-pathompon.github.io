@@ -35,24 +35,26 @@
       </div>
     </header>
 
-    <div class='container'>
-      <h1 id='page-title' class='content-wrapper'>
-        <%= current_page.data.title %>
-        <div class='subtitle'>
-          <%= current_page.data.subtitle %>
-          <% if current_article %>
-            <%= post_tags current_article %>
-          <% end %>
-        </div>
-      </h1>
+    <% unless current_page.data.no_page_title %>
+      <div class='container'>
+        <h1 id='page-title' class='content-wrapper'>
+          <%= current_page.data.title %>
+          <div class='subtitle'>
+            <%= current_page.data.subtitle %>
+            <% if current_article %>
+              <%= post_tags current_article %>
+            <% end %>
+          </div>
+        </h1>
 
-      <% if current_article %>
-        <span class='post-author-info content-wrapper'>
-          by <span class='post-author'><%= current_article.data.author %></span>
-          <%= post_time current_article %>
-        </span>
-      <% end %>
-    </div>
+        <% if current_article %>
+          <span class='post-author-info content-wrapper'>
+            by <span class='post-author'><%= current_article.data.author %></span>
+            <%= post_time current_article %>
+          </span>
+        <% end %>
+      </div>
+    <% end %>
 
     <div id='content' class='container'>
       <div class='content-wrapper'>

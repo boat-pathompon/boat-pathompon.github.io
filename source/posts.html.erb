@@ -1,18 +1,17 @@
 ---
 title: All Posts
-no_footer: true
 ---
 
-<div class='post-container content-wrapper'>
-  <% blog.articles.each do |article| %>
-    <div class='post-card'>
-      <a href='<%= article.url %>'>
-        <div class='post-title'><%= article.title %></div>
-        <img class='post-cover' src='<%= article.data.cover %>'/>
-      </a>
-      <%= post_time article %>
+<% blog.articles.each do |article| %>
+  <div class='post'>
+    <a href='<%= article.url %>'>
+      <img class='post-cover' src='<%= article.data.cover %>'/>
+      <div class='post-title'><%= article.title %></div>
+      <div class='post-author-info'>by <span class='post-author'><%= article.data.author %></span></div>
       <div class='post-description'><%= article.data.description %></div>
-      <%= post_tags article %>
-    </div>
-  <% end %>
-</div>
+      <%= post_time article %>
+    </a>
+  </div>
+<% end %>
+
+<div class='clear'></div>

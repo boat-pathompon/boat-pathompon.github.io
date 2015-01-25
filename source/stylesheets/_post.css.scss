@@ -1,67 +1,64 @@
-.post-card {
-  background-color: #fff;
-  border: 1px solid #eee;
-  border-bottom: 3px solid #ddd;
-  margin: 20px auto;
-  max-width: 370px;
+.post {
+  box-sizing: border-box;
+  float: left;
+  margin-bottom: 30px;
+  padding-right: 30px;
+  width: 50%;
 
-  .post-title {
-    font-family: Sukhumvit;
-    font-size: 20px;
-    line-height: 1.3;
+  a {
+    border-bottom: 1px dashed #eee;
+    box-sizing: border-box;
+    display: block;
     padding: 15px;
+    position: relative;
+    width: 100%;
+
+    &::after {
+      content: "";
+      clear: both;
+      display: block;
+    }
+
+    &:hover {
+      border-color: #aaa;
+
+      .post-title { color: $color-facebook; }
+    }
   }
 
   .post-cover {
-    width: 100%;
+    height: 150px;
+    float: left;
+    margin-right: 15px;
+    width: 150px;
+  }
+
+  .post-title {
+    color: #555;
+    font-size: 32px;
+    transition: .3s color;
   }
 
   .post-description {
-    color: #777;
-    line-height: 1.3;
-    padding: 10px 15px 15px 15px;
+    color: #888;
+    height: 38px;
+    overflow: hidden;
+    margin-top: 15px;
   }
 
   .post-time {
-    color: #aaa;
+    bottom: 15px;
+    color: #ccc;
     font-size: 14px;
-    margin-top: 10px;
-    padding: 0 15px;
-    text-align: right;
+    position: absolute;
+    right: 15px;
 
     i { margin-right: 5px; }
   }
 
-  .post-tags {
-    background-color: #eee;
-    border: 1px solid #ddd;
-    line-height: 1.3;
-    margin: 10px -1px -1px -1px;
-    padding: 5px 10px;
-    position: relative;
-    text-align: right;
-
-    a {
-      color: #555;
-      font-size: 14px;
-      font-weight: 400;
-
-      &:hover { color: $color-sky-blue; }
-    }
-
-    i { display: none; }
-  }
-}
-
-.post {
-  background-color: #fff;
-  border-radius: 3px 3px 8px 8px;
-  border: 1px solid #ddd;
-  border-bottom: 5px solid #bbb;
-
-  h1, h2, h3, h4, h5, h6 {
-    border: none;
-    padding-left: 0;
+  .post-author-info {
+    margin-top: 8px;
+    text-align: left;
   }
 }
 
@@ -70,7 +67,7 @@
   display: block;
   font-size: 14px;
   margin-bottom: 10px;
-  margin-top: -5px;
+  margin-top: 10px;
   padding-right: 15px;
   text-align: right;
 
