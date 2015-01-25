@@ -1,1 +1,0 @@
-(function(){$(function(){return $(".nav-menu-toggle").click(function(n){return $(this).parent().find(".nav-items").fadeIn(200),n.preventDefault(),n.stopPropagation(),$("body").one("click",function(){return $(".nav-items").hide()})})})}).call(this);
