@@ -61,12 +61,14 @@ header {
 #footer {
   bottom: 0;
   font-size: 14px;
-  height: 70px;
+  height: 90px;
+  padding-bottom: 0;
   position: absolute;
   width: 100%;
 
   ul {
     border-top: 1px solid #ddd;
+    padding: 20px 0;
   }
 
   i { margin-right: 7px; }
