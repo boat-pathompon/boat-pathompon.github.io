@@ -27,7 +27,7 @@
           <ul>
             <li><a href='/'><i class='fa fa-home'></i>Home</a></li>
             <li><a href='/posts'><i class='fa fa-folder-open'></i>Posts</a></li>
-            <li><a href='/tags'><i class='fa fa-tags'></i>Tags</a></li>
+            <!-- <li><a href='/tags'><i class='fa fa-tags'></i>Tags</a></li> -->
             <li><a href='/about-me'><i class='fa fa-paper-plane'></i>About Me</a></li>
             <li><a class='follow-fb-link' href='http://facebook.com/little.b.cartoon' target='_blank'><i class='fa fa-facebook'></i>Follow Me</a></li>
           </ul>
@@ -36,22 +36,25 @@
     </header>
 
     <% unless current_page.data.no_page_title %>
-      <div class='container'>
-        <h1 id='page-title' class='content-wrapper'>
-          <%= current_page.data.title %>
-          <div class='subtitle'>
-            <%= current_page.data.subtitle %>
-            <% if current_article %>
-              <%= post_tags current_article %>
-            <% end %>
-          </div>
-        </h1>
-
+      <div id='page-title'>
         <% if current_article %>
+          <h1 class='article-title content-wrapper'>
+            <%= current_page.data.title %>
+            <div class='subtitle'>
+              <%= current_page.data.subtitle %>
+              <%= post_tags current_article %>
+            </div>
+          </h1>
+
           <span class='post-author-info content-wrapper'>
             by <span class='post-author'><%= current_article.data.author %></span>
             <%= post_time current_article %>
           </span>
+        <% else %>
+          <div class='jumbotron-title'>
+            <div class='background'></div>
+            <h1><%= current_page.data.title %></h1>
+          </div>
         <% end %>
       </div>
     <% end %>
