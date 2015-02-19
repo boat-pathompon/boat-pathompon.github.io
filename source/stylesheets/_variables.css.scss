@@ -31,6 +31,14 @@ $color-violet: #7519d1;
   @media screen and (min-width: 1360px) {
     padding: 20px 0;
   }
+
+  @media screen and (max-width: 480px) {
+    padding: 20px;
+  }
+
+  @media screen and (max-width: 470px) {
+    padding: 20px 10px;
+  }
 }
 
 @mixin content-wrapper {
