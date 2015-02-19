@@ -9,11 +9,8 @@
 
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= "#{current_page.data.title} | Little B" %></title>
-    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <%= stylesheet_link_tag "normalize", "all" %>
   </head>
 
   <body class="<%= page_classes %>">
@@ -69,7 +66,12 @@
     </nav>
     <div id='modal-mask'></div>
 
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
+    <%= stylesheet_link_tag "normalize", "all" %>
+
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <%= javascript_include_tag  "all" %>
+
   </body>
 </html>
