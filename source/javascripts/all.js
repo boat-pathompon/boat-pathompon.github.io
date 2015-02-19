@@ -1,3 +1,3 @@
 //= require plugins/jquery.timeago
-//= require plugins/gridify-min
+//= require _sidebar
 //= require _post

@@ -14,9 +14,6 @@
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <%= stylesheet_link_tag "normalize", "all" %>
-
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <%= javascript_include_tag  "all" %>
   </head>
 
   <body class="<%= page_classes %>">
@@ -24,13 +21,8 @@
       <div class='content-wrapper'>
         <a href='/' id='logo'>LittleB<span class='suffix'><i class='fa fa-paint-brush'></i>.land</span></a>
         <nav id='topnav'>
-          <ul>
-            <li><a href='/'><i class='fa fa-home'></i>Home</a></li>
-            <li><a href='/posts'><i class='fa fa-folder-open'></i>Posts</a></li>
-            <!-- <li><a href='/tags'><i class='fa fa-tags'></i>Tags</a></li> -->
-            <li><a href='/about-me'><i class='fa fa-paper-plane'></i>About Me</a></li>
-            <li><a class='follow-fb-link' href='http://facebook.com/little.b.cartoon' target='_blank'><i class='fa fa-facebook'></i>Follow Me</a></li>
-          </ul>
+          <a href='#' class='sidebar-toggle'><i class='fa fa-reorder'></i></a>
+          <%= partial 'nav' %>
         </nav>
       </div>
     </header>
@@ -51,9 +43,9 @@
             <%= post_time current_article %>
           </span>
         <% else %>
-          <div class='jumbotron-title'>
+          <div class='jumbotron-title animated fadeInDown'>
             <div class='background'></div>
-            <h1><%= current_page.data.title %></h1>
+            <h1 class='animated fadeInUp'><%= current_page.data.title %></h1>
           </div>
         <% end %>
       </div>
@@ -66,16 +58,18 @@
     </div>
 
     <% unless current_page.data.no_footer %>
-      <nav id='footer' class='container'>
-        <ul class='content-wrapper'>
-          <li><a href='/'><i class='fa fa-home'></i>Home</a></li>
-          <li><a href='/posts'><i class='fa fa-folder-open'></i>Posts</a></li>
-          <li><a href='/tags'><i class='fa fa-tags'></i>Tags</a></li>
-          <li><a href='/about-me'><i class='fa fa-paper-plane'></i>About Me</a></li>
-          <li><a href='http://facebook.com/little.b.cartoon' target='_blank'><i class='fa fa-facebook'></i>Facebook Page</a></li>
-          <li class='copyright'>Copyright ® 2015 <span class='site-name'>LittleB</span></li>
-        </ul>
-      </nav>
+      <footer class='container'>
+        <span>Copyright ® 2015 <a href='/' class='site-name'>LittleB</a></span>
+      </footer>
     <% end %>
+
+    <nav id='sidenav'>
+      <a href='#' class='dismiss-btn'><i class='fa fa-angle-right'></i></a>
+      <%= partial 'nav' %>
+    </nav>
+    <div id='modal-mask'></div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <%= javascript_include_tag  "all" %>
   </body>
 </html>
