@@ -11,13 +11,13 @@ header {
   #logo {
     color: #fff;
     font-family: 'Dancing script';
-    font-size: 35px;
+    font-size: 28px;
     margin-left: 10px;
     position: relative;
     text-shadow: 0 1px 0 #333;
 
     .suffix {
-      font-size: 16px;
+      font-size: 14px;
       margin-left: 3px;
       vertical-align: top;
     }
@@ -43,8 +43,8 @@ header {
 
   a {
     color: #fff;
-    line-height: 35px;
-    padding: 10px 18px;
+    line-height: 25px;
+    padding: 6px 14px;
 
     &.current { font-weight: 700; }
     &:hover { color: $color-dimmed-cyan; }
@@ -62,7 +62,7 @@ header {
   .sidebar-toggle {
     cursor: pointer;
     display: none;
-    font-size: 28px;
+    font-size: 24px;
     padding: 0;
   }
 }
@@ -87,7 +87,7 @@ footer {
 }
 
 #page-title {
-  margin-top: 75px;
+  margin-top: 65px;
 
   .article-title {
     border-bottom: 1px solid #ddd;
