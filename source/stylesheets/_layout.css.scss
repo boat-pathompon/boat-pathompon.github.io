@@ -29,8 +29,15 @@ header {
   }
 }
 
+.topnav-container {
+  position: relative;
+}
+
 #topnav {
-  float: right;
+  position: absolute;
+  right: 0;
+  top: 0;
+  // float: right;
 
   hr { display: none; }
   i { margin-right: 7px; }

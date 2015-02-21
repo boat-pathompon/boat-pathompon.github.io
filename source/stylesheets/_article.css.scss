@@ -1,35 +1,81 @@
 .article {
   .article-title {
-    border-bottom: 5px solid #ddd;
-    padding: 10px 0;
+    border-bottom: 4px solid #ddd;
+    margin-bottom: 30px;
+    position: relative;
 
     h1 {
-      font-size: 30 px;
+      color: #333;
+      font-size: 32px;
       font-weight: 400;
       line-height: 1.5;
+      margin-bottom: 0;
+    }
+
+    .subtitle {
+      color: #777;
+      font-size: 18px;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+
+    .post-author-info {
+      bottom: -30px;
+      color: #888;
+      margin-left: 5px;
+      position: absolute;
+      left: 0;
+      font-weight: 700;
+
+      .post-author {
+        color: $color-skitch;
+        margin-left: 5px;
+      }
+    }
+
+    .post-time {
+      color: #999;
+      display: inline;
+      font-size: 14px;
+      font-weight: 400;
+      margin-left: 10px;
+
+      i { margin-right: 5px; }
+    }
+
+    @media (max-width: 400px) {
+      h1 {
+        font-size: 28px;
+        line-height: 1.4;
+      }
+
+      .subtitle { margin-top: 5px; }
+      .post-author-info { bottom: -50px; }
+      .post-author-info { font-size: 16px; }
+
+      .post-time {
+        display: block;
+        margin-left: 0;
+        margin-top: 5px;
+      }
     }
   }
-    // font-size: 35px;
-    // font-weight: 300;
-    // line-height: 1.5;
-    // margin-bottom: 0;
-    // margin-top: 0;
-    // overflow: hidden;
-    // padding-bottom: 20px;
-    //
-    // .subtitle {
-    //   color: #999;
-    //   font-size: 20px;
-    //   padding-left: 5px;
-    //   line-height: 1.8;
-    //
-    //   .post-tags {
-    //     display: inline;
-    //     font-size: 16px;
-    //     margin-left: 10px;
-    //
-    //     a { color: $color-dimmed-light-orange; }
-    //     i { margin-right: 8px; }
-    //   }
-    // }
+
+  img {
+    border: 6px solid #fff;
+    box-shadow: 3px 3px 3px #ddd;
+    display: block;
+    margin: 15px auto;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .post-tags {
+    color: #aaa;
+    font-size: 16px;
+    margin-top: 15px;
+
+    a { color: #aaa }
+    i { margin-right: 8px; }
+  }
 }

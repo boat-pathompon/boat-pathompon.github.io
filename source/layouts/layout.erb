@@ -15,7 +15,7 @@
 
   <body class="<%= page_classes %> <%= 'article' if current_article %>">
     <header class='container'>
-      <div class='content-wrapper'>
+      <div class='content-wrapper topnav-container'>
         <a href='/' id='logo'>LittleB<span class='suffix'><i class='fa fa-paint-brush'></i>.land</span></a>
         <nav id='topnav'>
           <a href='#' class='sidebar-toggle'><i class='fa fa-reorder'></i></a>
@@ -27,19 +27,15 @@
     <% unless current_page.data.no_page_title %>
       <div id='page-title'>
         <% if current_article %>
-          <div class='article-title container content-wrapper'>
-            <h1 class='animated fadeInDown'>
-              <%= current_page.data.title %>
-              <div class='subtitle'>
-                <%= current_page.data.subtitle %>
-                <%= post_tags current_article %>
-              </div>
-            </h1>
-
-            <span class='post-author-info content-wrapper'>
-              by <span class='post-author'><%= current_article.data.author %></span>
-              <%= post_time current_article %>
-            </span>
+          <div class='container content-wrapper'>
+            <div class='article-title '>
+              <h1 class='animated fadeInDown'><%= current_page.data.title %></h1>
+              <div class='subtitle animated fadeInUp'><%= current_page.data.subtitle %></div>
+              <span class='post-author-info content-wrapper'>
+                by <span class='post-author'><%= current_article.data.author %></span>
+                <%= post_time current_article %>
+              </span>
+            </div>
           </div>
         <% else %>
           <div class='jumbotron-title animated fadeInDown'>
@@ -53,6 +49,10 @@
     <div id='content' class='container'>
       <div class='content-wrapper'>
         <%= yield %>
+
+        <% if current_article %>
+          <%= post_tags current_article %>
+        <% end %>
       </div>
     </div>
 
