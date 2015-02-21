@@ -26,17 +26,13 @@ $color-violet: #7519d1;
 
 @mixin container {
   box-sizing: border-box;
-  padding: 20px 40px;
+  padding: 20px;
 
-  @media screen and (min-width: 1360px) {
+  @media (min-width: 1360px) {
     padding: 20px 0;
   }
 
-  @media screen and (max-width: 480px) {
-    padding: 20px;
-  }
-
-  @media screen and (max-width: 470px) {
+  @media (max-width: 470px) {
     padding: 20px 10px;
   }
 }

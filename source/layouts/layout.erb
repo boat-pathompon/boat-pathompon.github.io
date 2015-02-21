@@ -13,7 +13,7 @@
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
   </head>
 
-  <body class="<%= page_classes %>">
+  <body class="<%= page_classes %> <%= 'article' if current_article %>">
     <header class='container'>
       <div class='content-wrapper'>
         <a href='/' id='logo'>LittleB<span class='suffix'><i class='fa fa-paint-brush'></i>.land</span></a>
@@ -27,22 +27,24 @@
     <% unless current_page.data.no_page_title %>
       <div id='page-title'>
         <% if current_article %>
-          <h1 class='article-title content-wrapper'>
-            <%= current_page.data.title %>
-            <div class='subtitle'>
-              <%= current_page.data.subtitle %>
-              <%= post_tags current_article %>
-            </div>
-          </h1>
+          <div class='article-title container content-wrapper'>
+            <h1 class='animated fadeInDown'>
+              <%= current_page.data.title %>
+              <div class='subtitle'>
+                <%= current_page.data.subtitle %>
+                <%= post_tags current_article %>
+              </div>
+            </h1>
 
-          <span class='post-author-info content-wrapper'>
-            by <span class='post-author'><%= current_article.data.author %></span>
-            <%= post_time current_article %>
-          </span>
+            <span class='post-author-info content-wrapper'>
+              by <span class='post-author'><%= current_article.data.author %></span>
+              <%= post_time current_article %>
+            </span>
+          </div>
         <% else %>
           <div class='jumbotron-title animated fadeInDown'>
             <div class='background'></div>
-            <h1 class='animated fadeInUp'><%= current_page.data.title %></h1>
+            <h1 class='animated fadeInUp content-wrapper container'><%= current_page.data.title %></h1>
           </div>
         <% end %>
       </div>
@@ -54,11 +56,9 @@
       </div>
     </div>
 
-    <% unless current_page.data.no_footer %>
-      <footer class='container'>
-        <span>Copyright ® 2015 <a href='/' class='site-name'>LittleB</a></span>
-      </footer>
-    <% end %>
+    <footer class='container'>
+      <span>Copyright ® 2015 <a href='/' class='site-name'>LittleB</a></span>
+    </footer>
 
     <nav id='sidenav'>
       <a href='#' class='dismiss-btn'><i class='fa fa-angle-right'></i></a>

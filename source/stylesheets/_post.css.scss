@@ -1,13 +1,13 @@
 .post {
-  box-sizing: border-box;
   float: left;
-  margin-bottom: 30px;
-  padding-right: 30px;
+  line-height: 1.4;
+  margin-bottom: 20px;
+  padding: 0 10px;
   width: 50%;
 
   a {
     background-color: #fff;
-    box-shadow: 5px 5px 0 #ddd;
+    box-shadow: 4px 4px 0 #ddd;
     box-sizing: border-box;
     display: block;
     padding: 10px;
@@ -19,67 +19,98 @@
       clear: both;
       display: block;
     }
-
-    &:hover {
-      .post-title { color: $color-facebook; }
-    }
   }
 
   .post-cover {
-    height: 150px;
+    height: 200px;
     float: left;
     margin-right: 15px;
-    width: 150px;
+    width: 200px;
   }
 
   .post-title {
-    color: #555;
-    font-size: 24px;
+    color: #333;
+    font-size: 22px;
     font-weight: 400;
-    padding: 10px;
+    margin-right: 8px;
+    margin-top: 10px;
+    max-height: 85px;
+    overflow: hidden;
     transition: .3s color;
   }
 
-  .post-description {
-    color: #888;
-    height: 38px;
-    overflow: hidden;
-    margin-top: 15px;
-  }
-
   .post-time {
-    background-color: $color-skitch;
-    box-shadow: 3px 3px 0 #ccc;
-    color: #fff;
+    bottom: 10px;
+    color: #aaa;
     font-size: 14px;
-    padding: 5px 10px;
+    margin-top: 5px;
     position: absolute;
     right: 15px;
-    top: -15px;
+
 
     i { margin-right: 8px; }
   }
 
   .post-author-info {
-    margin-top: 8px;
-    text-align: left;
+    color: #888;
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 10px;
+
+    .post-author {
+      color: $color-skitch;
+      margin-left: 5px;
+    }
   }
-}
 
-.post-author-info {
-  color: #aaa;
-  display: block;
-  font-size: 14px;
-  margin-bottom: 10px;
-  margin-top: 10px;
-  padding-right: 15px;
-  text-align: right;
+  @media (max-width: 1100px) {
+    .post-title { font-size: 20px; }
 
-  .post-author { color: $color-dimmed-cyan; }
-  .post-time {
-    display: inline;
-    margin-left: 10px;
+    .post-cover {
+      height: 150px;
+      width: 150px;
+    }
+  }
 
-    i { margin-right: 5px; }
+  @media (max-width: 900px) {
+    .post-title {
+      font-size: 18px;
+      height: 75px;
+      max-height: 75px;
+    }
+
+    .post-cover {
+      height: 90px;
+      width: 90px;
+    }
+
+    .post-author-info {
+      margin-top: 15px;
+    }
+  }
+
+  @media (max-width: 670px) {
+    float: none;
+    padding: 0;
+    width: 100%;
+
+    .post-title {
+      height: auto;
+    }
+
+    .post-author-info {
+      margin-top: 10px;
+    }
+  }
+
+  @media (max-screen: 380px) {
+    .post-title {
+      height: 75px;
+    }
+    
+    .post-author-info {
+      margin-top: 15px;
+    }
   }
 }

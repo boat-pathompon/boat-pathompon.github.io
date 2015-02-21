@@ -38,7 +38,7 @@ helpers do
     content_tag :div, class: 'post-tags' do
       [
         content_tag(:i, '', class: 'fa fa-tags'),
-        article.tags.join(', ').html_safe
+        article.tags.map { |tag| link_to(tag, '#') }.join(', ').html_safe
         # article.tags.map { |tag| link_to(tag, tag_path(tag)) }.join(', ').html_safe
       ].join.html_safe
     end
