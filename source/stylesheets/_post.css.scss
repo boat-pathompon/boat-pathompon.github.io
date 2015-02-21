@@ -104,11 +104,11 @@
     }
   }
 
-  @media (max-screen: 380px) {
+  @media (max-width: 480px) {
     .post-title {
       height: 75px;
     }
-    
+
     .post-author-info {
       margin-top: 15px;
     }

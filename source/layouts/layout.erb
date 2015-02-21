@@ -7,6 +7,8 @@
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
+    <%= facebook_og_meta current_article || current_page, current_article ? :article : :page %>
+
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= "#{current_page.data.title} | Little B" %></title>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
@@ -52,6 +54,10 @@
 
         <% if current_article %>
           <%= post_tags current_article %>
+          <div id='share-it'>
+            <div class='text'><i class='fa fa-share-alt'></i>LIKE IT ? SHARE IT ON :</div>
+            <%= share_btn current_article, '<i class="fa fa-facebook"></i>Facebook'.html_safe %>
+          </div>
         <% end %>
       </div>
     </div>

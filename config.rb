@@ -43,6 +43,35 @@ helpers do
       ].join.html_safe
     end
   end
+
+  def share_btn(article, text, provider = :facebook)
+    params = {
+      u: URI.escape(URI.join('http://littleb.land', article.url).to_s)
+    }
+
+    share_url = case provider
+      when :facebook then 'http://facebook.com/sharer.php'
+    end
+
+    link_to text,
+      "#{share_url}?#{params.to_param}",
+      target: '_blank',
+      class: provider
+  end
+
+  def facebook_og_meta(object, type)
+    url = URI.join('http://littleb.land', object.url).to_s
+    tags = [
+      content_tag(:meta, '', property: 'og:title', content: object.data.title),
+      content_tag(:meta, '', property: 'og:url', content: url),
+    ]
+
+    if type == :article
+      tags << content_tag(:meta, '', property: 'og:image', content: object.data.cover)
+    end
+
+    tags.join
+  end
 end
 
 # Autoprefixer
