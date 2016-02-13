@@ -1,0 +1,30 @@
+$spacer: 1rem;
+$spacer-x: $spacer;
+$spacer-y: $spacer;
+$spacers: (
+  0: (
+    x:   0,
+    y:   0
+  ),
+  1: (
+    x:   $spacer-x,
+    y:   $spacer-y
+  ),
+  2: (
+    x:   ($spacer-x * 1.5),
+    y:   ($spacer-y * 1.5)
+  ),
+  3: (
+    x:   ($spacer-x * 3),
+    y:   ($spacer-y * 3)
+  ),
+  4: (
+    x:   ($spacer-x * 5),
+    y:   ($spacer-y * 5)
+  ),
+  5: (
+    x:   ($spacer-x * 7),
+    y:   ($spacer-y * 7)
+  )
+);
+$border-width:               1px;

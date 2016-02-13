@@ -1,0 +1,28 @@
+$alert-success-text: $brand-success-lightest;
+$alert-success-bg: $brand-success;
+
+$alert-info-text: $brand-info-lightest;
+$alert-info-bg: $brand-info;
+
+$alert-warning-text: $brand-warning-lightest;
+$alert-warning-bg: $brand-warning;
+
+$alert-danger-text: $brand-danger-lightest;
+$alert-danger-bg: $brand-danger;
+
+.alert.alert-dismissible {
+  border: none;
+  border-radius: 0;
+
+  .close {
+    color: rgba(#000, 0.5);
+    font-size: 2rem;
+    font-weight: 300;
+    opacity: 0.4;
+    outline: none;
+    text-shadow: none;
+    top: -0.4rem;
+
+    &:hover { opacity: 1; }
+  }
+}

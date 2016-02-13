@@ -1,0 +1,11 @@
+label.boolean {
+  .js-custom-checkbox {
+    cursor: pointer;
+    margin-right: 8px;
+    vertical-align: middle;
+
+    &.fa-circle {
+      color: $brand-success;
+    }
+  }
+}

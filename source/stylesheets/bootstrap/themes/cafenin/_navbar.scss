@@ -1,0 +1,37 @@
+$navbar-border-radius: 0;
+$navbar-padding-x: 0;
+$navbar-padding-y: 1rem;
+$navbar-bg-color: rgba(#fff, 0.95);
+$navbar-box-shadow: 0 0 3px rgba(#000, 0.3);
+
+$navbar-light-color: $brand-primary;
+$navbar-light-hover-color: $brand-primary-darker;
+$navbar-light-active-color: $body-color;
+
+// Can not config via variable so do with override instead! see original:
+// https://github.com/twbs/bootstrap/blob/v4-dev/scss/_navbar.scss#L149-L157
+.navbar-light .navbar-nav .nav-link {
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+}
+
+// $nav-link-padding:                          .5em 1em;
+// $nav-link-hover-bg:                         $gray-lighter;
+// $nav-disabled-link-color:                   $gray-light;
+// $nav-disabled-link-hover-color:             $gray-light;
+
+// $nav-tabs-border-color:                     #ddd;
+
+// $nav-tabs-link-border-width:                $border-width;
+// $nav-tabs-link-hover-border-color:          $gray-lighter;
+
+// $nav-tabs-active-link-hover-bg:             $body-bg;
+// $nav-tabs-active-link-hover-color:          $gray;
+// $nav-tabs-active-link-hover-border-color:   #ddd;
+
+// $nav-tabs-justified-link-border-color:            #ddd;
+// $nav-tabs-justified-active-link-border-color:     $body-bg;
+
+// $nav-pills-border-radius:                   $border-radius;
+// $nav-pills-active-link-hover-bg:            $component-active-bg;
+// $nav-pills-active-link-hover-color:         $component-active-color;

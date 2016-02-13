@@ -1,0 +1,55 @@
+$btn-font-weight: normal;
+
+$btn-primary-color: rgba(#fff, 0.9);
+$btn-primary-bg: $brand-primary;
+$btn-primary-border: $brand-primary;
+
+$btn-secondary-color: rgba(#fff, 0.9);
+$btn-secondary-bg: $brand-secondary;
+$btn-secondary-border: $brand-secondary;
+
+$btn-success-color: rgba(#fff, 0.9);
+$btn-success-bg: $brand-success;
+$btn-success-border: $brand-success;
+
+$btn-warning-color: rgba(#fff, 0.9);
+$btn-warning-bg: $brand-warning;
+$btn-warning-border: $brand-warning;
+
+$btn-danger-color: rgba(#fff, 0.9);
+$btn-danger-bg: $brand-danger;
+$btn-danger-border: $brand-danger;
+
+$btn-info-color: rgba(#fff, 0.9);
+$btn-info-bg: $brand-info;
+$btn-info-border: $brand-info;
+
+$btn-link-disabled-color: rgba(#fff, 0.9);
+
+$btn-padding-x-sm: .5rem;
+$btn-padding-y-sm: .25rem;
+$btn-padding-x: 1rem;
+$btn-padding-y: 0.5rem;
+$btn-padding-x-lg: 1.5rem;
+$btn-padding-y-lg: .75rem;
+
+$btn-border-radius: 0.2rem;
+$btn-border-radius-lg: 0.2rem;
+$btn-border-radius-sm: 0.2rem;
+
+$link-color: $brand-success;
+$link-decoration: none;
+$link-hover-color: $brand-success-darker;
+$link-hover-decoration: none;
+
+a, button {
+  transition: .3s color, .3s background, .3s border, .3s opacity;
+
+  &.disabled, &:disabled { opacity: 0.5; }
+
+  &.btn {
+    box-shadow: 0 1px 1px rgba(#000, 0.2);
+
+    &.disabled, &:disabled { opacity: 0.3; }
+  }
+}

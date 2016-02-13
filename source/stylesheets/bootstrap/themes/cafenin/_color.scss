@@ -1,0 +1,74 @@
+$color-blue-gray-lightest: #ECEFF1;
+$color-blue-gray-lighter: #CFD8DC;
+$color-blue-gray: #607D8B;
+$color-blue-gray-darker: #37474F;
+$color-blue-gray-darkest: #263238;
+
+$color-brown-lightest: #EFEBE9;
+$color-brown-lighter: #D7CCC8;
+$color-brown: #795548;
+$color-brown-darker: #4E342E;
+$color-brown-darkest: #3E2723;
+
+$color-cyan-lightest: #E0F2F1;
+$color-cyan-lighter: #B2DFDB;
+$color-cyan: #009688;
+$color-cyan-darker: #00695C;
+$color-cyan-darkest: #004D40;
+
+$color-indigo-lightest: #E8EAF6;
+$color-indigo-lighter: #C5CAE9;
+$color-indigo: #3F51B5;
+$color-indigo-darker: #283593;
+$color-indigo-darkest: #1A237E;
+
+$color-orange-lightest: #FFF3E0;
+$color-orange-lighter: #FFF3E0;
+$color-orange: #FF9800;
+$color-orange-darker: #EF6C00;
+$color-orange-darkest: #E65100;
+
+$color-red-lightest: #FFEBEE;
+$color-red-lighter: #FFCDD2;
+$color-red: #F44336;
+$color-red-darker: #C62828;
+$color-red-darkest: #B71C1C;
+
+$brand-primary-lightest: $color-brown-lightest;
+$brand-primary-lighter: $color-brown-lighter;
+$brand-primary: $color-brown;
+$brand-primary-darker: $color-brown-darker;
+$brand-primary-darkest: $color-brown-darkest;
+
+$brand-secondary-lightest: $color-blue-gray-lightest;
+$brand-secondary-lighter: $color-blue-gray-lighter;
+$brand-secondary: $color-blue-gray;
+$brand-secondary-darker: $color-blue-gray-darker;
+$brand-secondary-darkest: $color-blue-gray-darkest;
+
+$brand-success-lightest: $color-cyan-lightest;
+$brand-success-lighter: $color-cyan-lighter;
+$brand-success: $color-cyan;
+$brand-success-darker: $color-cyan-darker;
+$brand-success-darkest: $color-cyan-darkest;
+
+$brand-warning-lightest: $color-orange-lightest;
+$brand-warning-lighter: $color-orange-lighter;
+$brand-warning: $color-orange;
+$brand-warning-darker: $color-orange-darker;
+$brand-warning-darkest: $color-orange-darkest;
+
+$brand-info-lightest: $color-indigo-lightest;
+$brand-info-lighter: $color-indigo-lighter;
+$brand-info: $color-indigo;
+$brand-info-darker: $color-indigo-darker;
+$brand-info-darkest: $color-indigo-darkest;
+
+$brand-danger-lightest: $color-red-lightest;
+$brand-danger-lighter: $color-red-lighter;
+$brand-danger: $color-red;
+$brand-danger-darker: $color-red-darker;
+$brand-danger-darkest: $color-red-darkest;
+
+$body-bg: $brand-primary-lightest;
+$body-color: $brand-secondary-darker;
